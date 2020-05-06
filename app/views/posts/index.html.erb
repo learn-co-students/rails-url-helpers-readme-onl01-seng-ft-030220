@@ -1,0 +1,16 @@
+<h1>All Posts</h1>
+
+<ol>
+  <% @posts.each do |post| %>
+    <li>
+      <%# Least Abstract %>
+      <!-- <strong><a href="/posts/<%= post.id %>"><%= post.title %></a></strong> -->
+      <%# Less Abstract %>
+      <!-- <strong><%= link_to(post.title, "/posts/#{post.id}") %></strong> -->
+      <%# More Abstract %>
+      <!-- <strong><%= link_to(post.title, post_path(post.id)) %></strong> -->
+      <%# Most Abstract %>
+      <strong><%= link_to(post.title, post_path(post)) %></strong>
+    </li>
+  <% end %>
+</ol>
